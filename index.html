@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengumuman Staff FORDA BENEFITS 2025</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      text-align: center;
+      background-image: url('retro_background.jpg'); /* Gunakan latar belakang retro */
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9); /* Efek transparansi */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      padding: 30px;
+    }
+    h1, h2 {
+      color: #5A3A2E;
+      margin: 10px 0;
+    }
+    input {
+      padding: 10px;
+      margin: 10px 0;
+      width: 300px;
+      border: 1px solid #5A3A2E;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      color: white;
+      background-color: #8B4513;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #5A3A2E;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    .success {
+      color: #006400;
+    }
+    .failure {
+      color: #8B0000;
+    }
+    .logo {
+      margin-bottom: 20px;
+    }
+    .logo img {
+      max-width: 150px;
+      border-radius: 50%;
+      border: 3px solid #8B4513;
+    }
+    .footer {
+      margin-top: 30px;
+      color: #5A3A2E;
+      font-size: 14px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="logo_invicta.png" alt="Logo Invicta">
+    </div>
+    <h1>FORUM DAERAH BENEFITS</h1>
+    <h2>KABINET INVICTA</h2>
+    <p>Masukkan NRP Anda untuk melihat hasil seleksi.</p>
+    <input type="text" id="nrpInput" placeholder="Masukkan NRP Anda">
+    <button onclick="checkNRP()">Cek Hasil</button>
+    <div id="result" class="result"></div>
+    <div class="footer">"Together We Rise, Beyond Boundaries"</div>
+  </div>
+
+  <script>
+    const staffData = {
+      "5022241193": { name: "Muhammad Fadhil Ramadhan", department: "Departemen Dalam Negeri" },
+      "5015241111": { name: "Jasmine Chaerunnisa Bachri", department: "Pengembangan Sumber Daya Mahasiswa" },
+      // Tambahkan data lainnya...
+    };
+
+    function checkNRP() {
+      const nrp = document.getElementById("nrpInput").value.trim();
+      const resultDiv = document.getElementById("result");
+
+      if (staffData[nrp]) {
+        const staff = staffData[nrp];
+        resultDiv.innerHTML = `<p class="success">🎉 Selamat! ${staff.name}, Anda diterima di ${staff.department}. Terima kasih atas kontribusi Anda, kami tidak sabar bekerja sama dengan Anda!</p>`;
+      } else {
+        resultDiv.innerHTML = `<p class="failure">😔 Maaf, NRP Anda tidak ada dalam daftar penerima. Jangan patah semangat, masih banyak kesempatan lain untuk berkontribusi! Terima kasih telah mencoba.</p>`;
+      }
+    }
+  </script>
+</body>
+</html>
