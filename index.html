@@ -6,83 +6,89 @@
   <title>Pengumuman Staff FORDA BENEFITS 2025</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Georgia', serif;
       text-align: center;
-      background-color: #f9f5f0;
+      background-image: url('retro_background.jpg'); /* Gunakan latar belakang retro */
+      background-size: cover;
+      background-position: center;
       margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
       padding: 20px;
-      background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png'); /* Kertas retro */
-      color: #333;
+      background: rgba(255, 255, 255, 0.9); /* Efek transparansi */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      padding: 30px;
     }
-    h1 {
-      color: #0047AB;
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-    h2 {
-      color: #6b4226;
-      font-size: 20px;
-      margin-top: 5px;
+    h1, h2 {
+      color: #5A3A2E;
+      margin: 10px 0;
     }
     input {
       padding: 10px;
       margin: 10px 0;
       width: 300px;
-      border: 1px solid #ddd;
+      border: 1px solid #5A3A2E;
       border-radius: 5px;
-      font-size: 16px;
     }
     button {
       padding: 10px 20px;
       color: white;
-      background-color: #0047AB;
+      background-color: #8B4513;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 16px;
+      font-weight: bold;
     }
     button:hover {
-      background-color: #003580;
+      background-color: #5A3A2E;
     }
     .result {
       margin-top: 20px;
       font-size: 18px;
     }
     .success {
-      color: green;
+      color: #006400;
     }
     .failure {
-      color: red;
+      color: #8B0000;
     }
     .logo {
-      margin: 20px auto;
-      max-width: 150px;
+      margin-bottom: 20px;
     }
-    .container {
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      padding: 20px;
-      background-color: #ffffffcc; /* Transparansi */
-      display: inline-block;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .logo img {
+      max-width: 150px;
+      border-radius: 50%;
+      border: 3px solid #8B4513;
+    }
+    .footer {
+      margin-top: 30px;
+      color: #5A3A2E;
+      font-size: 14px;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="LOGO INVICTA.png" alt="Logo INVICTA" class="logo">
-    <h1>Pengumuman Staff FORDA BENEFITS 2025</h1>
-    <h2>Kabinet INVICTA</h2>
+    <div class="logo">
+      <img src="logo_invicta.png" alt="Logo Invicta">
+    </div>
+    <h1>FORUM DAERAH BENEFITS</h1>
+    <h2>KABINET INVICTA</h2>
     <p>Masukkan NRP Anda untuk melihat hasil seleksi.</p>
     <input type="text" id="nrpInput" placeholder="Masukkan NRP Anda">
     <button onclick="checkNRP()">Cek Hasil</button>
     <div id="result" class="result"></div>
+    <div class="footer">"Together We Rise, Beyond Boundaries"</div>
   </div>
 
   <script>
     const staffData = {
-      // Departemen Dalam Negeri
-      "5022241193": { name: "Muhammad Fadhil Ramadhan", department: "Departemen Dalam Negeri" },
+     "5022241193": { name: "Muhammad Fadhil Ramadhan", department: "Departemen Dalam Negeri" },
       "5022241236": { name: "Muhammad Faiz Wicaksana", department: "Departemen Dalam Negeri" },
       "5048241076": { name: "Muhammad Zaki Ali Yasykur", department: "Departemen Dalam Negeri" },
       "5007241145": { name: "Muhammad Aidhil Hakim", department: "Departemen Dalam Negeri" },
